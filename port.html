@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio de ADATIN Renel</title>
+  <style>
+    .hero-section {
+  height: 100vh;
+  background: linear-gradient(to right, #4e9af1, #4f0286);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.hero-content {
+  max-width: 700px;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+}
+
+.hero-content h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+.hero-content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.cta-button {
+  background-color: #fff;
+  color: #4f0286;
+  text-decoration: none;
+  padding: 12px 25px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #e6e6e6;
+}
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background-color: #f9f9f9;
+      color: #4f0286;
+    }
+
+
+    header {
+      background-color: #4e9af1;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      border-bottom: 2px solid #222;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+    }
+
+    /* À propos */
+    #about {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .about-text {
+      flex: 2;
+    }
+
+    .about-img {
+      flex: 2;
+      text-align: center;
+    }
+
+    .about-img img {
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      border: 3px solid #4e9af1;
+    }
+    
+
+    /* Compétences */
+    .skills-box {
+      background: #fff;
+      border: 1px solid #ddd;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 15px;
+    }
+
+    .skill-item {
+      flex: 1 1 200px;
+      background: #f0f0f0;
+      padding: 10px;
+      border-radius: 8px;
+      text-align: center;
+      font-weight: 500;
+    }
+
+    /* Projets */
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .project-card {
+      background: white;
+      border-radius: 10px;
+      padding: 15px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .project-card h3 {
+      margin-top: 0;
+    }
+
+    .project-card button {
+      align-self: start;
+      margin-top: 15px;
+      padding: 8px 12px;
+      background: #4e9af1;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .project-card:hover {
+      transform: scale(1.03);
+      transition: 0.3s;
+    }
+
+    /* Formulaire */
+    .contact-form {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(74, 140, 187, 0.05);
+    }
+
+    .contact-form label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: 500;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    .contact-form button {
+      background: #4e9af1;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #4e9af1;
+      color: #fff;
+      margin-top: 40px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      #about {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+<section id="home" class="hero-section">
+  <div class="hero-content">
+    <h1>ADATIN Renel</h1>
+    <h2>Graphiste & Développeur Web</h2>
+    <p>Je conçois des identités visuelles modernes et des interfaces web performantes. Passionné par le design et le code, je donne vie à vos idées à travers des créations esthétiques et fonctionnelles.</p>
+    <a href="#projects" class="cta-button">Voir mes projets</a>
+  </div>
+</section>
+
+  <header>
+    <h1>Bienvenue sur mon portfolio</h1>
+    <nav>
+      <ul>
+        <li><a href="#home">Acceuil</a></li>
+        <li><a href="#about">À propos</a></li>
+        <li><a href="#skills">Compétences</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#projects">Projets</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- À propos -->
+  <section id="about">
+    <div class="about-text">
+      <h2>À propos de moi</h2>
+      <p>Je suis un développeur web junior passionné par la création de sites modernes, réactifs et accessibles. J'aime apprendre de nouvelles technologies et relever des défis techniques. Je suis rigoureux, curieux, et prêt à m’investir dans des projets innovants.</p>
+      <a href="C:\Users\RENEL LANDO\Desktop\Exercice1\Portfolio\CV_Renel_MDC.pdf" download style="display:inline-block;margin-top:15px;padding:10px 20px;background-color:#4e9af1;color:white;text-decoration:none;border-radius:5px;font-weight:bold;">Télécharger mon CV</a>
+
+    </div>
+    <div class="about-img">
+      <img src="C:\Users\RENEL LANDO\Desktop\Exercice1\Portfolio\renel photo.png" alt="Ma photo de profil">
+    </div>
+  </section>
+
+  <!-- Compétences -->
+  <section id="skills">
+    <h2>Compétences</h2>
+    <div class="skills-box">
+      <p>Voici un aperçu de mes compétences techniques :</p>
+      <div class="skills-list">
+        <div class="skill-item">HTML5</div>
+        <div class="skill-item">CSS3</div>
+        <div class="skill-item">JavaScript</div>
+        <div class="skill-item">Responsive Design</div>
+        <div class="skill-item">Git & GitHub</div>
+        <div class="skill-item">Débogage</div>
+        <div class="skill-item">Redaction de projets de A à Z</div>
+        <div class="skill-item">Photoshop,Illustrator,Indesign</div>
+      </div>
+    </div>
+  </section>
+
+<!-- Services -->
+<section id="services">
+  <h2>Mes services</h2>
+  <div class="skills-list">
+    <div class="skill-item">Création de logo & identité visuelle</div>
+    <div class="skill-item">Design UI/UX pour applications web et mobiles</div>
+    <div class="skill-item">Développement de sites vitrines en HTML, CSS, JS</div>
+    <div class="skill-item">Refonte ou optimisation graphique</div>
+    <div class="skill-item">Réalisation de supports de communication (affiches, flyers, bannières,rollup)</div>
+  </div>
+</section>
+
+
+  <!-- Projets -->
+  <section id="projects">
+    <h2>Mes projets</h2>
+    <div class="projects">
+      <div class="project-card">
+        <h3>Mini Site Web</h3>
+        <p>Un petit site responsive réalisé avec HTML et CSS.</p>
+        <button>Voir plus</button>
+      </div>
+      <div class="project-card">
+        <h3>Todo List</h3>
+        <p>Une application JavaScript simple pour gérer des tâches quotidiennes.</p>
+        <button>Voir plus</button>
+      </div>
+      <div class="project-card">
+        <h3>Calculatrice JS</h3>
+        <p>Un projet simple pour créer une calculatrice avec JavaScript.</p>
+        <button>Voir plus</button>
+      </div>
+      <div class="project-card">
+        <h3>Création de l'identité visuelle pour une startup tech</h3>
+        <p>Développement du logo, choix de la palette de couleurs, typographies et charte graphique complète pour une startup spécialisée dans l’IA. Le branding a été décliné sur cartes de visite, réseaux sociaux et site web.</p>
+        <button>Voir plus</button>
+      </div>
+      <div class="project-card">
+        <h3>Campagne visuelle pour un événement culturel</h3>
+        <p>Conception de visuels pour une campagne de communication (affiches, stories Instagram, bannières Facebook) autour d’un festival de musique. Travail sur l’impact visuel et la cohérence graphique.</p>
+        <button>Voir plus</button>
+      </div>
+      <div class="project-card">
+        <h3>Interface d’une application de gestion de budget</h3>
+        <p>Réalisation de maquettes UX/UI sur Figma pour une app mobile intuitive dédiée à la gestion des dépenses. Design moderne, navigation fluide et respect des normes d’accessibilité.</p>
+        <button>Voir plus</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="contact-form">
+      <form action="#" method="POST">
+        <label for="name">Nom</label>
+        <input type="text" id="name" name="name" placeholder="Votre nom" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Votre adresse email" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" placeholder="Votre message" required></textarea>
+
+        <button type="submit">Envoyer</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 ADATIN Renel. Tous droits réservés.
+  </footer>
+
+  <script>
+    // Scroll doux
+    document.querySelectorAll("nav a").forEach(link => {
+      link.addEventListener("click", e => {
+        e.preventDefault();
+        const id = link.getAttribute("href").substring(1);
+        document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+      });
+    });
+  </script>
+</body>
+</html>
